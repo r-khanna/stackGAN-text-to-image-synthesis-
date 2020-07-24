@@ -91,6 +91,14 @@ class TextDataset(data.Dataset):
     #         captions = self.load_captions(caption_name)
     #         caption_dict[key] = captions
     #     return caption_dict
+    
+    def load_all_captions(self):
+    caption_dict = {}
+    filepath = os.path.join(data_dir, 'caption_id.csv')
+    cap=pd.read_csv(filepath)
+    for key in self.filenames:
+        caption_dict[key] = cap['Caption'][cap['image_id']==key]
+    return caption_dict
 
     # def load_captions(self, caption_name):
     #     cap_path = caption_name
