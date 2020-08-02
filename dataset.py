@@ -64,7 +64,7 @@ class TextDataset(data.Dataset):
         key = self.filenames[index]
         data_dir = '%s/jpg' % self.data_dir
         #captions = self.captions[key]
-        embeddings = self.embeddings[index,:]
+        embedding = self.embeddings[index,:]
         img_name = '%s/image/%s.jpg' % (data_dir, key)
         img = self.get_img(img_name)
         if self.target_transform is not None:
