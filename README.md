@@ -13,3 +13,13 @@ In addition, please `pip install` the following packages:
 - `numpy`
 - `pandas`
 - `torchfile`
+
+## Sample case
+
+### Caption
+
+### Stage-1 Image
+<img src="data/images/Network%20Description/network%20description.jpg"/>
+
+### Stage-2 Image
+<img src="data/images/Network%20Description/network%20description.jpg"/>
