@@ -19,7 +19,7 @@ In addition, please `pip install` the following packages:
 ### Caption
 
 ### Stage-1 Image
-<img src="data/images/Network%20Description/network%20description.jpg"/>
+<img src="data/images/sample/s1_001.png"/>
 
 ### Stage-2 Image
-<img src="data/images/Network%20Description/network%20description.jpg"/>
+<img src="data/images/sample/s2_001.png"/>
