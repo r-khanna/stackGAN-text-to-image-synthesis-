@@ -66,8 +66,11 @@ def compute_discriminator_loss(netD, real_imgs, fake_imgs,
         errD_fake = (errD_fake + uncond_errD_fake) / 2.
     else:
         errD = errD_real + (errD_fake + errD_wrong) * 0.5
+
     return errD, errD_real, errD_wrong, errD_fake    
     # return errD, errD_real.data[0], errD_wrong.data[0], errD_fake.data[0]
+
+
 
 
 def compute_generator_loss(netD, fake_imgs, real_labels, conditions, gpus):
@@ -100,10 +103,12 @@ def weights_init(m):
         if m.bias is not None:
             m.bias.data.fill_(0.0)
 
+
 VIS_COUNT = 64
 #############################
 def save_img_results(data_img, fake, epoch, image_dir):
     num = VIS_COUNT
+
     fake = fake[0:num]
     # data_img is changed to [0,1]
     if data_img is not None:
